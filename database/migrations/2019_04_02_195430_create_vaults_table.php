@@ -15,7 +15,7 @@ class CreateVaultsTable extends Migration
     {
         Schema::create('vaults', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigIncrements('user_id')->default('0');
+            $table->integer('user_id')->default('0');
             $table->string('site_name');
             $table->string('user_name');
             $table->string('password');
